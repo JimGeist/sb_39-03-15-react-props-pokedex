@@ -1,0 +1,11 @@
+
+.pokemon-card {
+    background-color: #D3D3D3;
+    border-radius: 2em;
+    float: left;
+    margin: 10px;
+}
+
+.pokemon-card-title {
+    color: #4E47FF;
+}

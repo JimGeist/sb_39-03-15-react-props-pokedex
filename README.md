@@ -1,70 +1,34 @@
-# Getting Started with Create React App
+# sb_39-03-15-react-props-pokedex
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Technology Stack
+- **Front-end**: ReactJS
+- **Back-end**: N/A
 
-## Available Scripts
+## Launching the App
+1. Set up the environment via `npx create-react-app` .
+1. Replace the `src` folder in the resulting `npx` setup with the `src` folder for the Pokedex app.
+1. Once the `src` folder in in place, issue `npm start` from bash. 
 
-In the project directory, you can run:
+## Assignment Details
 
-### `npm start`
+Further practice with React components and properties by creating a pokemon application. The applicaiton consists of 5 components.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+`App` renders the `Pokedex` component by passing it the array of pokemons in `PokemonChars.js`
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+`PokemonChars` is an array declaration with 8 Pokemon characters. Each character object in the array has an id, name, type, and base_experience.
 
-### `npm test`
+`Pokedex` is a component that receives the array of Pokemon characters from App and renders a h1 and calls a map function to build PokemonCard component and Pokemon component.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+`PokemonCard` component is a grey background div element with a title and children components. The pokemons.map() in Pokedex passes the character name as the title for PokemonCard and the Pokemon component. PokemonCard.css has the necessary styling for the grey 'card' and h1.
 
-### `npm run build`
+`Pokemon` component renders an image of the pokemon character, the character `type`, and the `base_experience`. `id` + an image url yields a png image of the pokemon character and `name` is used in the alt tag for the image. Pokemon.css has the necessary styling for the image size and the type-experience paragraph.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+**Enhancements**
+- All .css files were moved to a `static` folder.
+- Creation of a PokemonCard component to render a gray card. PokemonCard accepts a title parameter and an array of children components.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+**Difficulties**
+- Getting aclimated with React. All the little things with JavaScript that have come back very angry. {} maddness, arrow functions, implicit returns, did I mention {} heirarchy maddness? 
+- Not really a difficulty, but I definitely see why there was a focus previously in the course to write smaller, modular pieces. If anything, right now, that is the bit to get used too -- all the different files involved in an applcattion, and how to organize them too.
